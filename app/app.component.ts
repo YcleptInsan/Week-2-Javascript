@@ -6,12 +6,14 @@ import { Animal  } from './animal.model';
   template: `
   <div class="container">
     <h1>Welcome to the Zoo Portal</h1>
-    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"> </animal-list>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing"></edit-animal>
   </div>
   `
 })
 
 export class AppComponent {
+  //initial value of selected animal equaling null
   selectedAnimal = null;
 
   masterAnimalList: Animal[] = [
@@ -19,8 +21,12 @@ export class AppComponent {
     new Animal("Black Bear", "James", 1 ,"Carnivore", "Western Hemisphere", 3, "Male", "Bear-ies", "Loud noises"),
     new Animal("Pacific Walrus", "Fred", 12 , "Carnivore", "North Pole", 8, "Male", "Cold Water", "Killer Whales"),
   ];
-
+  //setting the selected animal equal to the clicked animal
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
   }
+  //setting value back to null once the user is done editing the information.
+  finishedEditing() {
+      this.selectedKeg = null;
+    }
 }

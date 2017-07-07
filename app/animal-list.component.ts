@@ -4,7 +4,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-  <ul>
+  <ol>
     <li *ngFor="let currentAnimal of childAnimalList">
       <strong>Species:</strong> {{currentAnimal.species}}
       <br>
@@ -27,9 +27,10 @@ import { Animal } from './animal.model';
       <button (click)="editButtonHasBeenClicked(currentAnimal)"> Edit
       </button>
       <br>
+      <hr>
       <br>
     </li>
-  </ul>
+  </ol>
   `
 })
 
