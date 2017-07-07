@@ -6,31 +6,34 @@ import { Animal } from './animal.model';
   template: `
   <ul>
     <li *ngFor="let currentAnimal of childAnimalList">
-      Species: {{currentAnimal.species}}
+      <strong>Species:</strong> {{currentAnimal.species}}
       <br>
-      Name: {{currentAnimal.name}}
+      <strong>Name:</strong> {{currentAnimal.name}}
       <br>
-      Age: {{currentAnimal.age}}
+      <strong>Age:</strong> {{currentAnimal.age}}
       <br>
-      Diet: {{currentAnimal.diet}}
+      <strong>Diet:</strong> {{currentAnimal.diet}}
       <br>
-      Location: {{currentAnimal.location}}
+      <strong>Location:</strong> {{currentAnimal.location}}
       <br>
-      Caretakers: {{currentAnimal.caretakers}}
+      <strong>Caretakers:</strong> {{currentAnimal.caretakers}}
       <br>
-      Sex: {{currentAnimal.sex}}
+      <strong>Sex:</strong> {{currentAnimal.sex}}
       <br>
-      Likes: {{currentAnimal.likes}}
+      <strong>Likes:</strong> {{currentAnimal.likes}}
       <br>
-      Dislikes: {{currentAnimal.dislikes}}
+      <strong>Dislikes:</strong> {{currentAnimal.dislikes}}
+      <br>
+      <button (click)="editButtonHasBeenClicked(currentAnimal)"> Edit
+      </button>
+      <br>
+      <br>
     </li>
-    <button (click)="editButtonHasBeenClicked(currentAnimal)"> Edit
-    </button>
   </ul>
   `
 })
 
-exports class AnimalListComponent {
+export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter;
 
