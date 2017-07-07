@@ -5,9 +5,12 @@ import { Animal  } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container">
-    <h1>Welcome to the Zoo Portal</h1>
+    <h1 id="main-page-title">Welcome to the Zoo Portal</h1>
+    <br>
+    <br>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing($event)"></edit-animal>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing()"></edit-animal>
+    <new-animal (newAnimalSender)="newAnimal($event)"></new-animal>
   </div>
   `
 })
@@ -28,5 +31,10 @@ export class AppComponent {
   //setting value back to null once the user is done editing the information.
   finishedEditing() {
       this.selectedAnimal = null;
-    }
+  }
+
+  //pushed newly created Animal to the master List of Animals
+  newAnimal(newAnimalFromChild: Animal){
+    this.masterAnimalList.push(newAnimalFromChild);
+  }
 }

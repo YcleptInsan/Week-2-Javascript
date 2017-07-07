@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
   <ol>
-    <li *ngFor="let currentAnimal of childAnimalList">
+    <li id="list-animals"*ngFor="let currentAnimal of childAnimalList">
       <strong>Species:</strong> {{currentAnimal.species}}
       <br>
       <strong>Name:</strong> {{currentAnimal.name}}
@@ -37,11 +37,14 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter;
+  @Output() clickSenderAdd = new EventEmitter;
 
   filterAnimalsBy: string ="allAnimals";
 
   editButtonHasBeenClicked(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);
   }
-
+  addButtonHasBeenClicked(animalToAdd: Animal) {
+    this.clickSenderAdd.emit(animalToAdd);
+  }
 }
