@@ -4,14 +4,18 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-
-  <select (change)="onChange($event.target.value)">
+  <div id="selectNav">
+  <select class="form-control"(change)="onChange($event.target.value)">
     <option value="allAnimals">All Animals</option>
     <option value="ageLessThan2">Age: Less Than 2 Years Old</option>
     <option value="ageGreaterThan2">Age: Greater Than 2 Years Old</option>
   </select>
-  <ol>
-    <li id="list-animals"*ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions">
+  </div>
+  <br>
+
+  <ol class="list-group">
+    <li class="list-group-item" id="list-animals"*ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions">
+    <hr>
       <strong>Species:</strong> {{currentAnimal.species}}
       <br>
       <strong>Name:</strong> {{currentAnimal.name}}
@@ -30,11 +34,11 @@ import { Animal } from './animal.model';
       <br>
       <strong>Dislikes:</strong> {{currentAnimal.dislikes}}
       <br>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)"> Edit
+      <br>
+      <button class="btn btn-info" (click)="editButtonHasBeenClicked(currentAnimal)"> Edit
       </button>
       <br>
       <hr>
-      <br>
     </li>
   </ol>
   `

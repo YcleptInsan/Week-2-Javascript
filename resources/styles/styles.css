@@ -1,9 +1,58 @@
 #main-page-title {
   text-align: center;
-  
-}
+  color: white;
+  font-size: 60px;
 
+
+}
+body {
+  background-color: black;
+}
 .container {
   text-align: center;
   background-color: aliceblue;
+  font-size: 19px;
+}
+
+#list-animals {
+  background-color: white;
+}
+
+#selectNav {
+  text-align: left;
+
+}
+
+li {
+  margin-bottom: 150px;
+}
+
+#add-menu-header {
+  background-color: white;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+.add-animal-container {
+  background-color: pink;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+h2 {
+  font-size: 40px;
+  font-family: Arial;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+
+}
+
+.form-group {
+  margin-left: 50px;
+  margin-right: 50px;
 }
