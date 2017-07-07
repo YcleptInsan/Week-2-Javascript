@@ -6,6 +6,7 @@ import { AnimalListComponent } from './animal-list.component';
 import { EditAnimalComponent } from './edit-animal.component';
 import { NewAnimalComponent } from './new-animal.component';
 import { AgeSortPipe } from './sort-age.pipe';
+import { PropertySortPipe } from './sort-properties';
 
 
 
@@ -16,7 +17,8 @@ import { AgeSortPipe } from './sort-age.pipe';
                     AnimalListComponent,
                     EditAnimalComponent,
                     NewAnimalComponent,
-                    AgeSortPipe
+                    AgeSortPipe,
+                    PropertySortPipe
                   ],
     bootstrap:    [ AppComponent ]
 })

@@ -12,9 +12,23 @@ import { Animal } from './animal.model';
   </select>
   </div>
   <br>
+  <div id="sortNav">
+  <select class="form-control"(change)="onSelection($event.target.value)">
+    <option value="filter">Filter</option>
+    <option value="species">Species</option>
+    <option value="name">Name</option>
+    <option value="age">Age</option>
+    <option value="diet">Diet</option>
+    <option value="location">Location</option>
+    <option value="sex">Sex</option>
+    <option value="likes">Likes</option>
+    <option value="dislikes">Dislikes</option>
+  </select>
+  </div>
+  <br>
 
   <ol class="list-group">
-    <li class="list-group-item" id="list-animals"*ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions">
+    <li class="list-group-item" id="list-animals" *ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions | propertySort:filterByProperties>">
     <hr>
       <strong>Species:</strong> {{currentAnimal.species}}
       <br>
@@ -50,9 +64,14 @@ export class AnimalListComponent {
 
 
   filterByOptions: string ="allAnimals";
+  filterByProperties: string ="filter";
 
   onChange(optionFromMenu) {
     this.filterByOptions = optionFromMenu;
+  }
+
+  onSelection(optionFromMenu) {
+    this.filterByProperties = optionFromMenu;
   }
 
   editButtonHasBeenClicked(animalToEdit: Animal) {
