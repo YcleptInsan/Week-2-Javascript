@@ -7,7 +7,7 @@ import { Animal  } from './animal.model';
   <div class="container">
     <h1>Welcome to the Zoo Portal</h1>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing"></edit-animal>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing($event)"></edit-animal>
   </div>
   `
 })
@@ -27,6 +27,6 @@ export class AppComponent {
   }
   //setting value back to null once the user is done editing the information.
   finishedEditing() {
-      this.selectedKeg = null;
+      this.selectedAnimal = null;
     }
 }
