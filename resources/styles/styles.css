@@ -1,7 +1,8 @@
 #main-page-title {
   text-align: center;
   color: white;
-  font-size: 60px;
+  font-size: 80px;
+  position: relative;
   text-shadow: -1px 0 black, 0 1px black, 5px 0 black, 0 -1px black;
 
 
@@ -13,6 +14,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 .container {
   text-align: center;
@@ -24,7 +26,10 @@ body {
 #list-animals {
   background-color: white;
 }
-
+#list-header {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 2px 0 black, 0 -1px black;
+}
 #selectNav {
   text-align: left;
 
@@ -36,6 +41,7 @@ li {
 
 #add-menu-header {
   background-color: white;
+  /*background-image: url(http://i0.wp.com/bitcast-a-sm.bitgravity.com/slashfilm/wp/wp-content/images/Zootopia-logo.jpg);*/
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 15px;
@@ -69,5 +75,12 @@ button {
 }
 
 #image-header {
-  
+  background-image: url(http://www.geeksofdoom.com/GoD/img/2015/11/zootopia-districts.jpg);
+  background-size: stretch;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:450px;
+
 }

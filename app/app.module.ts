@@ -17,7 +17,7 @@ import { AgeSortPipe } from './sort-age.pipe';
                     AnimalListComponent,
                     EditAnimalComponent,
                     NewAnimalComponent,
-                    AgeSortPipe
+                    AgeSortPipe,
                   ],
     bootstrap:    [ AppComponent ]
 })

@@ -9,7 +9,7 @@ import { Animal } from './animal.model';
 export class AgeSortPipe implements PipeTransform {
   transform(input: Animal[], sortBy) {
     var output: Animal[] = [];
-    if(sortBy === "ageLessThan2") {
+    if(sortBy === "ageLessThan2"){
       for(let i =0; i < input.length; i++) {
         if(input[i].age <= 2) {
           output.push(input[i]);
@@ -21,8 +21,8 @@ export class AgeSortPipe implements PipeTransform {
           if(input[i].age >= 2) {
             output.push(input[i]);
           }
-        }
-      return output;
+
+        }return output;
     } else {
       return input
 

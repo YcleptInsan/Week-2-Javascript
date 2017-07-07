@@ -28,7 +28,7 @@ import { Animal } from './animal.model';
   <br>
 
   <ol class="list-group">
-    <li class="list-group-item" id="list-animals" *ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions | propertySort:filterByProperties">
+    <li class="list-group-item" id="list-animals" *ngFor="let currentAnimal of childAnimalList | ageSort:filterByOptions">
     <hr>
       <strong>Species:</strong> {{currentAnimal.species}}
       <br>

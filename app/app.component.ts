@@ -9,7 +9,7 @@ import { Animal  } from './animal.model';
     </div>
     <div class="container">
     <br>
-    <h2> Below are all the Animals in Zootopia</h2>
+    <h2 id="list-header"> Below are all the Animals in Zootopia</h2>
     <br>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing()"></edit-animal>
