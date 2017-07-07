@@ -4,10 +4,12 @@ import { Animal  } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <h1 id="main-page-title">Welcome to the Zoo Portal</h1>
+    <div id="image-header">
+    <h1 id="main-page-title">Welcome to the Zootopia</h1>
+    </div>
     <div class="container">
     <br>
-    <h2> Here are all the Animals in our Zoo</h2>
+    <h2> Below are all the Animals in Zootopia</h2>
     <br>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (editDoneSender)="finishedEditing()"></edit-animal>
