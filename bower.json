@@ -1,12 +1,12 @@
 {
-  "name": "angular2-to-do",
+  "name": "angula2-animal",
   "description": "",
   "main": "",
   "authors": [
-    "guy <luckythelich@hotmail.com>"
+    ""
   ],
   "license": "MIT",
-  "homepage": "https://github.com/guyanderson/angular-to-do-tut",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
