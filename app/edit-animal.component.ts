@@ -10,23 +10,23 @@ import { Animal } from './animal.model';
     <h3><strong>Name:  </strong> {{childSelectedAnimal.name}} </h3>
       <hr>
       <h3>Edit Animal Information :</h3>
-      <label>Enter {{childSelectedAnimal.name}} Species</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Species</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.species"><br>
-      <label>Enter {{childSelectedAnimal.name}} Name</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s New Name</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.name"><br>
-      <label>Enter {{childSelectedAnimal.name}} Age</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Age</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.age"><br>
-      <label>Enter {{childSelectedAnimal.name}} Diet</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Diet</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.diet"><br>
-      <label>Enter {{childSelectedAnimal.name}} Location</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Location</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.location"><br>
       <label>Enter the Number of Caretakers needed for {{childSelectedAnimal.name}}</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.caretakers"><br>
-      <label>Enter {{childSelectedAnimal.name}} Sex</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Sex</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.sex"><br>
-      <label>Enter {{childSelectedAnimal.name}} Likes</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Likes</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.likes"><br>
-      <label>Enter {{childSelectedAnimal.name}} Dislikes</label><br>
+      <label>Enter {{childSelectedAnimal.name}}'s Dislikes</label><br>
       <input class="form-control" [(ngModel)]="childSelectedAnimal.dislikes"><br>
 
       <button class="btn btn-primary" (click)="editDoneButtonClicked()">Done</button>

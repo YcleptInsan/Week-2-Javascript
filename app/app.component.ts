@@ -5,7 +5,7 @@ import { Animal  } from './animal.model';
   selector: 'app-root',
   template: `
     <div id="image-header">
-    <h1 id="main-page-title">Welcome to the Zootopia</h1>
+      <h1 id="main-page-title">Welcome to the Zootopia</h1>
     </div>
     <div class="container">
     <br>

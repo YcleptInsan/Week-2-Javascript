@@ -4,6 +4,8 @@
   font-size: 80px;
   position: relative;
   text-shadow: -1px 0 black, 0 1px black, 5px 0 black, 0 -1px black;
+  /*align-self: flex-end;*/
+  margin-bottom: 50px;
 
 
 }
@@ -75,12 +77,15 @@ button {
 }
 
 #image-header {
-  background-image: url(http://www.geeksofdoom.com/GoD/img/2015/11/zootopia-districts.jpg);
+  /*background-image: url(./../img/zootopia-districts.jpg);*/
+  background-image: url(/resources/img/zootopia-districts.jpg);
   background-size: stretch;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height:450px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
